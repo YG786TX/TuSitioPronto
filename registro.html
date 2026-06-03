@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | TuSitioPronto</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos en línea integrados para la notificación flotante */
+        .notification-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #111111;
+            border-left: 4px solid #00ffcc;
+            color: #ffffff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 255, 204, 0.2);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateX(120%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .notification-toast.show {
+            transform: translateX(0);
+        }
+        .notification-toast.error {
+            border-left-color: #ff3e3e;
+            box-shadow: 0 5px 15px rgba(255, 62, 62, 0.2);
+        }
+        .notification-toast i {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box" style="padding: 2rem 3rem;"> 
+            <div class="login-header">
+                <a href="login.html" class="back-link">← Volver al Login</a>
+                <h2 class="logo">TuSitio<span>Pronto</span></h2>
+            </div>
+            
+            <form class="login-form" id="registroForm">
+                <h1>Crear Cuenta</h1>
+                <p>Únete y comienza a propulsar tu negocio hoy.</p>
+
+                <div class="input-field">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="reg-nombre" placeholder="Juan Pérez" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="reg-email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Contraseña</label>
+                    <input type="password" id="reg-password" placeholder="••••••••" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Confirmar Contraseña</label>
+                    <input type="password" id="reg-confirm-password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-login" style="margin-top: 15px;">Registrarme</button>
+                
+                <div class="login-footer">
+                    <span>¿Ya tienes cuenta? <a href="login.html">Inicia Sesión aquí</a></span>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                    <a href="privacidad.html" style="color: gray; margin-right: 15px; text-decoration: none; font-size: 0.8rem;">Privacidad</a>
+                    <a href="terminos.html" style="color: gray; text-decoration: none; font-size: 0.8rem;">Términos</a>
+                </div>
+            </form>
+        </div>
+        <div class="login-image">
+            <div class="image-overlay">
+                <blockquote>"El primer paso hacia el éxito global comienza con un clic."</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <script type="module" src="../js/registro.js"></script>
+
+</body>
+</html>

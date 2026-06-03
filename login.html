@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Clientes | TuSitioPronto</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos en línea integrados para la notificación flotante */
+        .notification-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #111111;
+            border-left: 4px solid #00ffcc;
+            color: #ffffff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 255, 204, 0.2);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateX(120%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .notification-toast.show {
+            transform: translateX(0);
+        }
+        .notification-toast.error {
+            border-left-color: #ff3e3e;
+            box-shadow: 0 5px 15px rgba(255, 62, 62, 0.2);
+        }
+        .notification-toast i {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <a href="index.html" class="back-link">← Volver</a>
+                <h2 class="logo">TuSitio<span>Pronto</span></h2>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <h1>Iniciar Sesión</h1>
+                <p>Gestiona tus proyectos digitales con nosotros.</p>
+
+                <div class="input-field">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="input-field">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-login">Entrar al Portal</button>
+                
+                <div class="login-footer"> 
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <div style="margin-top: 10px;">
+                        <span>¿No tienes cuenta? <a href="registro.html" style="font-weight: bold; color: #00ffcc;">Regístrate aquí</a></span>
+                    </div>
+                    <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                        <button type="button" id="btnCerrarSesion" style="background: transparent; color: #ff3e3e; border: 1px solid #ff3e3e; padding: 5px 10px; border-radius: 5px; cursor: pointer; width: 100%;">
+                            Cerrar Sesión Activa
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="login-image">
+            <div class="image-overlay">
+                <blockquote>"La tecnología no es un freno, sino el acelerador de tu éxito."</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <script type="module" src="../js/login.js"></script>
+
+</body>
+</html>

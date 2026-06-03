@@ -1,0 +1,153 @@
+:root {
+    --azul-electrico: #0055ff;
+    --verde-neon: #39ff14;
+    --negro-sq: #0a0b10;
+    --gris-oscuro: #161b22;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--negro-sq);
+    color: var(--blanco);
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Lado del Formulario */
+.login-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.login-header {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+    align-items: center;
+}
+
+.back-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.logo {
+    font-weight: 800;
+}
+
+.logo span { color: var(--verde-neon); }
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.input-field {
+    margin-bottom: 25px;
+}
+
+.input-field label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--blanco);
+}
+
+.input-field input {
+    width: 100%;
+    padding: 15px;
+    background: #1c2128;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    color: white;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background: var(--azul-electrico);
+    color: white;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: var(--verde-neon);
+    color: var(--negro-sq);
+}
+
+.login-footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.login-footer a {
+    color: var(--azul-electrico);
+    text-decoration: none;
+}
+
+/* Lado de la Imagen (Visual) */
+.login-image {
+    flex: 1.2;
+    background: linear-gradient(rgba(0,85,255,0.2), rgba(10,11,16,0.9)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.image-overlay blockquote {
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    border-left: 5px solid var(--verde-neon);
+    padding-left: 30px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .login-image { display: none; }
+    .login-box { max-width: 100%; }
+}

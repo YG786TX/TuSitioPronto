@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquetes y Soluciones | TuSitioPronto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/paquetes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-dark">
+
+    <header class="navbar">
+        <div class="container flex-nav">
+            <div class="logo">
+                <i class="fas fa-rocket"></i> TuSitio<span class="text-neon">Pronto</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="paquetes.html">Soluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-extra" style="display: flex; align-items: center; margin-right: 15px;">
+                <div class="cart-icon" style="margin-right: 20px; color: #00ffcc; cursor: pointer; position: relative;" onclick="window.location.href='carrito.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span style="position: absolute; top: -8px; right: -10px; background: #ff3e3e; color: white; font-size: 0.6rem; padding: 2px 5px; border-radius: 50%;">0</span>
+                </div>
+                <div class="search-container" style="display: flex; align-items: center; background: rgba(255,255,255,0.1); border: 1px solid #00ffcc; border-radius: 20px; padding: 2px 10px;">
+                    <input type="text" placeholder="Buscar..." id="search-input" style="background: transparent; border: none; color: white; outline: none; width: 100px; font-size: 0.8rem;">
+                    <button style="background: transparent; border: none; color: #00ffcc; cursor: pointer;"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">Iniciar Sesión</a>
+                <a href="contacto.html" class="btn-primary">Empezar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="paquetes-main">
+        <section class="paquetes-hero container text-center">
+            <h1 class="hidden">Nuestros <span class="text-neon">Paquetes</span></h1>
+            <p class="hidden">Selecciona la propulsión adecuada para tu proyecto global.</p>
+        </section>
+
+        <section class="container filters-section" style="margin-bottom: 40px; background: #111; padding: 20px; border-radius: 15px; border: 1px solid #222; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <span style="color: #8b949e; font-size: 0.9rem;"><i class="fas fa-filter" style="color: #00ffcc; margin-right: 5px;"></i> Filtrar por Categoría:</span>
+                <button class="filter-btn active" data-category="all" style="background: rgba(0,255,204,0.1); color: #00ffcc; border: 1px solid #00ffcc; padding: 6px 15px; border-radius: 20px; cursor: pointer; font-size: 0.85rem;">Todos</button>
+                <button class="filter-btn" data-category="marketing" style="background: #000; color: #8b949e; border: 1px solid #333; padding: 6px 15px; border-radius: 20px; cursor: pointer; font-size: 0.85rem;">Marketing</button>
+                <button class="filter-btn" data-category="corporativo" style="background: #000; color: #8b949e; border: 1px solid #333; padding: 6px 15px; border-radius: 20px; cursor: pointer; font-size: 0.85rem;">Corporativo</button>
+                <button class="filter-btn" data-category="ecommerce" style="background: #000; color: #8b949e; border: 1px solid #333; padding: 6px 15px; border-radius: 20px; cursor: pointer; font-size: 0.85rem;">E-commerce</button>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <label for="price-range" style="color: #8b949e; font-size: 0.9rem;">Precio Máx:</label>
+                <input type="range" id="price-range" min="400" max="7000" step="100" value="7000" style="accent-color: #00ffcc; cursor: pointer;">
+                <span id="price-value" style="color: #00ffcc; font-weight: bold; font-size: 0.9rem;">$7000 MXN</span>
+            </div>
+        </section>
+
+        <section class="container grid-paquetes">
+            <div class="card-paquete tarjeta-servicio hidden" data-prod-category="marketing" data-price="499">
+                <div class="paquete-header">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Landing Page</h3>
+                </div>
+                <p>Diseñada específicamente para convertir visitantes en clientes, eliminando distracciones.</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Diseño de una sola página</li>
+                    <li><i class="fas fa-check"></i> Formulario de contacto</li>
+                    <li><i class="fas fa-check"></i> Optimización para móviles</li>
+                </ul>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <a href="detalle-LandingPage.html" class="btn-paquete" style="flex: 1; text-align: center; text-decoration: none;">Detalles</a>
+                    <button onclick="agregarAlCarrito(1)" class="btn-paquete" style="background: #00ffcc; color: black; border: none; cursor: pointer; font-weight: bold; padding: 10px; border-radius: 5px;">Añadir</button>
+                </div>
+            </div>
+
+            <div class="card-paquete destacado tarjeta-servicio hidden" data-prod-category="corporativo" data-price="3500">
+                <div class="paquete-header">
+                    <i class="fas fa-building"></i>
+                    <h3>Web Corporativa</h3>
+                </div>
+                <p>Sitio oficial que representa tu identity, valores y autoridad en el mercado.</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Hasta 5 secciones</li>
+                    <li><i class="fas fa-check"></i> Panel autogestionable</li>
+                    <li><i class="fas fa-check"></i> SEO básico incluido</li>
+                </ul>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <a href="detalle-WebCorporativa.html" class="btn-paquete-glow" style="flex: 1; text-align: center; text-decoration: none;">Detalles</a>
+                    <button onclick="agregarAlCarrito(2)" style="background: #ff3e3e; color: white; border: none; cursor: pointer; font-weight: bold; padding: 10px 15px; border-radius: 5px; box-shadow: 0 0 10px rgba(255,62,62,0.5);">Añadir</button>
+                </div>
+            </div>
+
+            <div class="card-paquete tarjeta-servicio hidden" data-prod-category="ecommerce" data-price="6000">
+                <div class="paquete-header">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Tienda Básica</h3>
+                </div>
+                <p>E-commerce diseñado para vender productos integrando catálogo y pagos seguros.</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Catálogo de productos</li>
+                    <li><i class="fas fa-check"></i> Carrito de compras</li>
+                    <li><i class="fas fa-check"></i> Pasarela de pagos</li>
+                </ul>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <a href="detalle-TiendaBasica.html" class="btn-paquete" style="flex: 1; text-align: center; text-decoration: none;">Detalles</a>
+                    <button onclick="agregarAlCarrito(3)" class="btn-paquete" style="background: #00ffcc; color: black; border: none; cursor: pointer; font-weight: bold; padding: 10px; border-radius: 5px;">Añadir</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="no-results-message" style="display: none; text-align: center; padding: 60px 20px; color: #8b949e; width: 100%;">
+            <i class="fas fa-search-minus" style="font-size: 3rem; color: #30363d; margin-bottom: 15px; display: block;"></i>
+            <h3 style="color: white; margin-bottom: 5px;">No se encontraron servicios</h3>
+            <p>Intenta ajustar los criterios del filtro de búsqueda o el rango de precio.</p>
+        </div>
+    </main>
+
+    <footer class="footer-sq hidden">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <p class="footer-logo">TuSitioPronto</p>
+                <p class="footer-slogan">TECNOLOGÍA GLOBAL A TU ALCANCE</p>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 TuSitioPronto S.A. de C.V.</p>
+                <div class="footer-links" style="margin-top: 10px;">
+                    <a href="privacidad.html" style="color: gray; margin-right: 15px; text-decoration: none; font-size: 0.8rem;">Privacidad</a>
+                    <a href="terminos.html" style="color: gray; text-decoration: none; font-size: 0.8rem;">Términos</a>
+                </div>
+                <div class="socials" style="margin-top: 15px;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

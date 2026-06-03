@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuSitioPronto | Tecnología Global</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container flex-nav">
+            <div class="logo">
+                <i class="fas fa-rocket"></i> TuSitio<span class="text-neon">Pronto</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="paquetes.html">Soluciones</a></li> 
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-extra" style="display: flex; align-items: center; margin-right: 15px;">
+                <div class="cart-icon" style="margin-right: 20px; color: #00ffcc; cursor: pointer; position: relative;" onclick="window.location.href='carrito.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span style="position: absolute; top: -8px; right: -10px; background: #ff3e3e; color: white; font-size: 0.6rem; padding: 2px 5px; border-radius: 50%;">0</span>
+                </div>
+                <div class="search-container" style="display: flex; align-items: center; background: rgba(255,255,255,0.1); border: 1px solid #00ffcc; border-radius: 20px; padding: 2px 10px;">
+                    <input type="text" placeholder="Buscar..." id="search-input" style="background: transparent; border: none; color: white; outline: none; width: 100px; font-size: 0.8rem;">
+                    <button style="background: transparent; border: none; color: #00ffcc; cursor: pointer;"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">Iniciar Sesión</a>
+                <a href="contacto.html" class="btn-primary">Empezar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-sq">
+            <div class="hero-overlay"></div> 
+            <div class="container hero-content text-center">
+                <p class="hero-kicker hidden">Sitios web</p>
+                <h1 class="reveal-text hidden">Tu negocio en internet, <br>hoy mismo</h1>
+                <div class="hero-actions hidden">
+                    <a href="paquetes.html" class="btn-primary-large">Comenzar</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-proposition dark-section">
+            <div class="container grid-val">
+                <div class="val-item hidden">
+                    <h3 class="big-number">01</h3>
+                    <h4 class="val-title">Velocidad con Propósito</h4>
+                    <p>Entregamos pronto con máxima atención al detalle.</p>
+                </div>
+                <div class="val-item hidden">
+                    <h3 class="big-number">02</h3>
+                    <h4 class="val-title">Empatía Global</h4>
+                    <p>Entendemos tus necesidades en cualquier parte del mundo.</p>
+                </div>
+                <div class="val-item hidden">
+                    <h3 class="big-number">03</h3>
+                    <h4 class="val-title">Transparencia Radical</h4>
+                    <p>Comunicación honesta, clara y personal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-showcase" style="padding: 60px 0; background: #050505;">
+            <div class="container">
+                <div style="position: relative; width: 100%; max-width: 900px; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid #333; box-shadow: 0 0 30px rgba(0, 255, 204, 0.15);">
+                    <video controls style="width: 100%; display: block; border-radius: 20px;">
+                        <source src="spotsitiopronto.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services-sq">
+            <div class="container">
+                <h2 class="section-title hidden">Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card dark-card hidden">
+                        <h3>Landing Pages</h3>
+                        <p>Diseñadas específicamente para convertir visitantes en clientes.</p>
+                        <a href="paquetes.html" class="link-arrow">Ver más →</a>
+                    </div>
+                    <div class="service-card light-card hidden">
+                        <h3>Web Corporativa</h3>
+                        <p>Sitio oficial que representa tu identidad y valores.</p>
+                        <a href="paquetes.html" class="link-arrow">Ver más →</a>
+                    </div>
+                    <div class="service-card dark-card hidden">
+                        <h3>Tienda Básica</h3>
+                        <p>E-commerce para vender tus productos a nivel global.</p>
+                        <a href="paquetes.html" class="link-arrow">Ver más →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ubicacion" style="padding: 80px 0; background: #050505;">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; color: white; margin-bottom: 40px;">Dónde Estamos</h2>
+                <div style="width: 100%; height: 350px; border-radius: 20px; overflow: hidden; border: 1px solid #333;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.2776256681445!2d-103.1958244247534!3d20.660912380897933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b5e96e4bbd65%3A0x3116a98101842b0f!2sCETI%20Plantel%20Rio%20Santiago!5e1!3m2!1ses!2smx!4v1777252957056!5m2!1ses!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p style="text-align: center; color: #888; margin-top: 15px;">Sede Central - Conexión Global 24/7</p>
+            </div>
+        </section>
+
+        <section id="encuesta" style="padding: 80px 0; background: #0a0a0a; border-top: 1px solid #222;">
+            <div class="container" style="max-width: 700px;">
+                <div style="background: #111; padding: 40px; border-radius: 20px; border-left: 4px solid #00ffcc;">
+                    <h2 style="color: white; margin-bottom: 10px;">Tu opinión nos importa</h2>
+                    <p style="color: #666; margin-bottom: 30px;">Ayúdanos a mejorar la experiencia TuSitioPronto.</p>
+                    
+                    <form id="opinionForm">
+                        <div style="margin-bottom: 20px;">
+                            <label style="color: #00ffcc; display: block; margin-bottom: 10px;">¿Cómo calificarías la rapidez de nuestro servicio?</label>
+                            <input type="radio" name="rapidez" value="Excelente" checked> Excelente 
+                            <input type="radio" name="rapidez" value="Regular" style="margin-left: 15px;"> Regular 
+                            <input type="radio" name="rapidez" value="Podria mejorar" style="margin-left: 15px;"> Podría mejorar
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label style="color: #00ffcc; display: block; margin-bottom: 10px;">¿Qué servicio te interesa más?</label>
+                            <select name="servicio" style="width: 100%; padding: 10px; background: #000; color: white; border: 1px solid #333; border-radius: 8px;">
+                                <option value="E-commerce (Tienda)">E-commerce (Tienda)</option>
+                                <option value="Web Corporativa">Web Corporativa</option>
+                                <option value="Landing Pages">Landing Pages</option>
+                            </select>
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <label style="color: #00ffcc; display: block; margin-bottom: 10px;">Sugerencias:</label>
+                            <textarea name="sugerencias" style="width: 100%; height: 80px; background: #000; color: white; border: 1px solid #333; border-radius: 8px; padding: 10px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="border: none; cursor: pointer;">Enviar Percepción</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 50px 5%; background: #0a0a0a; border-top: 1px solid #222; color: #8b949e; font-size: 0.9rem;">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 1400px; margin: 0 auto; gap: 40px;">
+            
+            <div>
+                <p style="color: white; font-weight: bold; margin-bottom: 5px; font-size: 1.4rem; letter-spacing: 1px;">TuSitioPronto</p>
+                <p style="color: #00ffcc; font-weight: 600; margin-bottom: 0; font-size: 0.9rem; letter-spacing: 2px;">TECNOLOGÍA GLOBAL A TU ALCANCE</p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.02); padding: 30px 50px; border-radius: 15px; border: 1px solid #222; width: 100%; max-width: 800px;">
+                <p style="color: #ffffff; font-size: 0.9rem; font-weight: bold; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1.5px;">Empresas Aliadas (Páginas Hermanas):</p>
+                
+                <div style="display: flex; gap: 35px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    
+                    <a href="https://audilejester.github.io/sonoma-studio-demo/" target="_blank" style="text-decoration: none; transition: transform 0.2s;">
+                        <img src="./img/SONOMASTUDIO.png" alt="Logo Sonoma Studio" style="height: 65px; width: auto; object-fit: contain; background: #fff; padding: 6px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                    </a>
+                    
+                    <a href="https://visionplate.rf.gd/Index.html" target="_blank" style="text-decoration: none; transition: transform 0.2s;">
+                        <img src="./img/VisionPlante.png" alt="Logo Empresa Aliada 2" style="height: 65px; width: auto; object-fit: contain; background: #fff; padding: 6px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                    </a>
+                    
+                    <a href="https://neoo-three.vercel.app" target="_blank" style="text-decoration: none; transition: transform 0.2s;">
+                        <img src="./img/3.png" alt="Logo Empresa Aliada 3" style="height: 65px; width: auto; object-fit: contain; background: #fff; padding: 6px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div style="width: 100%; border-top: 1px solid #1c1c1c; padding-top: 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; max-width: 1100px;">
+                <p style="margin: 0;">© 2026 TuSitioPronto S.A. de C.V.</p>
+                
+                <div style="display: flex; gap: 20px;">
+                    <a href="privacidad.html" style="color: #8b949e; text-decoration: none;">Privacidad</a>
+                    <a href="terminos.html" style="color: #8b949e; text-decoration: none;">Términos</a>
+                </div>
+                
+                <div style="font-size: 1.4rem; display: flex; gap: 20px;">
+                    <a href="#" style="color: #8b949e; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: #8b949e; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

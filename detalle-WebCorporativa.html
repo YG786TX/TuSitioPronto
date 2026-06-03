@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Corporativo | TuSitioPronto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background-color: #050505; font-family: 'Inter', sans-serif;">
+
+    <!-- NAVBAR UNIFICADA -->
+    <header class="navbar">
+        <div class="container flex-nav">
+            <div class="logo">
+                <i class="fas fa-rocket"></i> TuSitio<span class="text-neon">Pronto</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="paquetes.html">Soluciones</a></li> 
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-extra" style="display: flex; align-items: center; margin-right: 15px;">
+                <div class="cart-icon" onclick="window.location.href='carrito.html'" style="margin-right: 20px; color: #39ff14; cursor: pointer; position: relative;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="badge-contador" style="position: absolute; top: -8px; right: -10px; background: #ff3e3e; color: white; font-size: 0.6rem; padding: 2px 5px; border-radius: 50%;">0</span>
+                </div>
+                <div class="search-container" style="display: flex; align-items: center; background: rgba(255,255,255,0.1); border: 1px solid #00ffcc; border-radius: 20px; padding: 2px 10px;">
+                    <input type="text" placeholder="Buscar..." id="search-input" style="background: transparent; border: none; color: white; outline: none; width: 100px; font-size: 0.8rem;">
+                    <button style="background: transparent; border: none; color: #00ffcc; cursor: pointer;"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">Iniciar Sesión</a>
+                <a href="contacto.html" class="btn-primary">Empezar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 160px; margin-bottom: 80px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 20px;">
+        
+        <div class="service-detail-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+            
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" 
+                     alt="Desarrollo Web Corporativo" 
+                     style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,255,204,0.1); border: 1px solid #00ffcc;">
+            </div>
+
+            <div class="service-info">
+                <span style="color: #00ffcc; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Suscripción Mensual</span>
+                <h1 style="font-size: 3rem; margin: 10px 0; color: white;">Web Corporativa</h1>
+                <p style="color: #ccc; line-height: 1.6; font-size: 1.1rem;">
+                    Propulsa tu identidad en el país. El Plan Corporativo es el motor diseñado para negocios en crecimiento que buscan liderar su sector en el territorio mexicano. Es un ecosistema digital completo bajo un modelo de suscripción sin complicaciones.
+                </p>
+
+                <div class="features-list" style="margin: 30px 0;">
+                    <div style="margin-bottom: 15px; color: white;">
+                        <i class="fas fa-check-circle" style="color: #00ffcc; margin-right: 10px;"></i> Hasta 10 páginas internas
+                    </div>
+                    <div style="margin-bottom: 15px; color: white;">
+                        <i class="fas fa-check-circle" style="color: #00ffcc; margin-right: 10px;"></i> Panel Autogestionable para control total
+                    </div>
+                    <div style="margin-bottom: 15px; color: white;">
+                        <i class="fas fa-check-circle" style="color: #00ffcc; margin-right: 10px;"></i> SEO Nacional Optimizado para México
+                    </div>
+                    <div style="margin-bottom: 15px; color: white;">
+                        <i class="fas fa-check-circle" style="color: #00ffcc; margin-right: 10px;"></i> Soporte 24/7 sin jerga técnica
+                    </div>
+                </div>
+
+                <div class="price-action" style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px dashed #333;">
+                    <span style="color: gray; text-decoration: line-through; font-size: 1rem;">$1,999 MXN</span>
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #00ffcc; margin-bottom: 15px;">
+                        $999 <span style="font-size: 1rem; color: white;">MXN / mes</span>
+                    </div>
+                    <button onclick="agregarAlCarrito('Web Corporativa', 999, 'Sitio oficial de autoridad que representa tu identidad corporativa y valores.')" style="display: block; width: 100%; text-align: center; padding: 15px; background: #00ffcc; color: black; border: none; font-weight: bold; border-radius: 8px; cursor: pointer; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; transition: background 0.3s;">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="detalle-profundo" style="margin-top: 80px; padding-top: 60px; border-top: 1px solid #222;">
+            <h2 style="color: #00ffcc; text-align: center; margin-bottom: 50px; font-size: 2.2rem;">¿Por qué elegir nuestra Web Corporativa?</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background: #111; padding: 40px; border-radius: 20px; border: 1px solid #222; text-align: center;">
+                    <i class="fas fa-shield-alt" style="font-size: 3rem; color: #00ffcc; margin-bottom: 25px;"></i>
+                    <h3 style="color: white; margin-bottom: 15px; font-size: 1.4rem;">Seguridad en México</h3>
+                    <p style="color: #aaa; line-height: 1.6;">Incluimos certificado SSL de por vida y protección de datos conforme a las normativas nacionales para garantizar la confianza total de tus clientes locales.</p>
+                </div>
+                
+                <div style="background: #111; padding: 40px; border-radius: 20px; border: 1px solid #222; text-align: center;">
+                    <i class="fas fa-tachometer-alt" style="font-size: 3rem; color: #00ffcc; margin-bottom: 25px;"></i>
+                    <h3 style="color: white; margin-bottom: 15px; font-size: 1.4rem;">Velocidad de Carga</h3>
+                    <p style="color: #aaa; line-height: 1.6;">Optimizamos cada línea de código para que tu sitio responda instantáneamente desde Tijuana hasta Cancún, mejorando la experiencia del usuario.</p>
+                </div>
+                
+                <div style="background: #111; padding: 40px; border-radius: 20px; border: 1px solid #222; text-align: center;">
+                    <i class="fas fa-users" style="font-size: 3rem; color: #00ffcc; margin-bottom: 25px;"></i>
+                    <h3 style="color: white; margin-bottom: 15px; font-size: 1.4rem;">Enfoque Nacional</h3>
+                    <p style="color: #aaa; line-height: 1.6;">Diseño pensado específicamente en el usuario mexicano, facilitando la navegación, el contacto directo y la conversión de ventas en la República Mexicana.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER INTEGRADO EXACTO (IMAGE_7BECC6.PNG) -->
+    <footer style="padding: 40px 5%; background: #0a0a0a; border-top: 1px solid #222; color: #8b949e; font-size: 0.9rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; max-width: 1400px; margin: 0 auto;">
+            <div>
+                <p style="color: white; font-weight: bold; margin-bottom: 5px; font-size: 1.1rem;">TuSitioPronto</p>
+                <p style="color: #39ff14; font-weight: 600;">TECNOLOGÍA GLOBAL A TU ALCANCE</p>
+            </div>
+            <div style="text-align: right;">
+                <p style="margin-bottom: 10px;">&copy; 2026 TuSitioPronto S.A. de C.V.</p>
+                <div style="margin-bottom: 10px;">
+                    <a href="privacidad.html" style="color: #8b949e; text-decoration: none; margin-right: 15px;">Privacidad</a>
+                    <a href="terminos.html" style="color: #8b949e; text-decoration: none;">Términos</a>
+                </div>
+                <div style="font-size: 1.2rem;">
+                    <a href="#" style="color: #8b949e; margin-right: 15px; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: #8b949e; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGICA INTERNA DEL CARRITO CON TOAST AUTOMÁTICO -->
+    <script>
+        let cart = JSON.parse(localStorage.getItem('carrito')) || [];
+        
+        function actualizarContador() {
+            const badge = document.getElementById('badge-contador');
+            let total = cart.reduce((acc, item) => acc + item.cantidad, 0);
+            if(badge) badge.innerText = total;
+        }
+
+        function mostrarToastNotificacion(mensaje) {
+            let container = document.getElementById('toast-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.id = 'toast-container';
+                document.body.appendChild(container);
+            }
+            const toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.innerHTML = `<i class="fas fa-check-circle"></i> <span>${mensaje}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => { toast.remove(); }, 4000);
+        }
+
+        function agregarAlCarrito(nombre, precio, descripcion) {
+            let itemEncontrado = cart.find(item => item.nombre === nombre);
+            if (itemEncontrado) {
+                itemEncontrado.cantidad += 1;
+            } else {
+                cart.push({ nombre, precio, descripcion, Math: false, cantidad: 1 });
+            }
+            localStorage.setItem('carrito', JSON.stringify(cart));
+            actualizarContador();
+            
+            // Inyección del Toast unificado de TuSitioPronto
+            mostrarToastNotificacion(`¡${nombre} se ha añadido al carrito con éxito!`);
+        }
+
+        actualizarContador();
+    </script>
+</body>
+</html>

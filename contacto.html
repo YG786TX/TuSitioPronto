@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | TuSitioPronto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-dark">
+
+    <header class="navbar">
+        <div class="container flex-nav">
+            <div class="logo">
+                <i class="fas fa-rocket"></i> TuSitio<span class="text-neon">Pronto</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="paquetes.html">Soluciones</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login" id="auth-nav-link">Iniciar Sesión</a>
+                <a href="contacto.html" class="btn-primary">Empezar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <div class="container contact-grid">
+            <div class="contact-info hidden">
+                <h1 class="text-neon">Cuéntanos tu idea</h1>
+                <p>Sabemos que cada negocio es único. Nosotros nos encargamos de que el mundo la vea en internet con la rapidez que necesitas.</p>
+                
+                <div class="email-box">
+                    <span class="label-blue">E-Mail Directo:</span>
+                    <p class="email-text">contacto@tusitiopronto.com</p>
+                </div>
+                
+                <div class="email-box">
+                    <span class="label-blue">Atención:</span>
+                    <p class="email-text">Lunes a Viernes, 9am - 6pm</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container hidden">
+                <form class="main-form" id="contactForm">
+                    <div class="input-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label pour="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" placeholder="Tu número de contacto">
+                    </div>
+                    <div class="input-group">
+                        <label for="idea">Tu idea:</label>
+                        <textarea id="idea" placeholder="Cuéntanos brevemente sobre tu proyecto..." required></textarea>
+                    </div>
+                    <p class="privacy-text">Al continuar, aceptas nuestra Política de privacidad.</p>
+                    <button type="submit" class="btn-submit">Enviar mi idea <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-sq hidden">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <p class="footer-logo">TuSitioPronto</p>
+                <p class="footer-slogan">TECNOLOGÍA GLOBAL A TU ALCANCE</p>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 TuSitioPronto S.A. de C.V.</p>
+                
+                <div class="footer-links" style="margin-top: 10px;">
+                    <a href="privacidad.html" style="color: gray; margin-right: 15px; text-decoration: none; font-size: 0.8rem;">Privacidad</a>
+                    <a href="terminos.html" style="color: gray; text-decoration: none; font-size: 0.8rem;">Términos</a>
+                </div>
+
+                <div class="socials" style="margin-top: 15px;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>
